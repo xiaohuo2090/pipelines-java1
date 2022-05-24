@@ -7,12 +7,15 @@ trigger:
 - master 
 strategy:
  matrix:
-   linux:
+   jdk10_linux:
     imageName: "ubuntu-latest"
-   mac:
+    jdkVersion: "1.10"
+   jdk11_mac:
     imageName: "macOS-latest"
-   windows:
+    jdkVersion: "1.11"
+   jdk12_windows:
     imageName: "windows-latest"
+    jdkVersion: "1.12"
  maxParallel: 3
 pool:
   vmImage: $(imageName)
