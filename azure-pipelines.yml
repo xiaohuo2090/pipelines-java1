@@ -13,6 +13,7 @@ strategy:
     imageName: "macOS-latest"
    windows:
     imageName: "windows-latest"
+ maxParallel: 3
 pool:
   vmImage: $(imageName)
 steps:
